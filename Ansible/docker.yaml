@@ -1,5 +1,5 @@
 - name: docker build and push
-  hosts: local  # Replace with the hostname or IP address of your target server
+  hosts: docker  # Replace with the hostname or IP address of your target server
   become: yes  # Run tasks with sudo privileges
 
   tasks:
@@ -20,7 +20,6 @@
         registry_url: https://index.docker.io/v1/
         username: ayshathramseena
         password: dckr_pat_I73CRdEJ06OaMJHAeNpQcWgGPS0
-
 
     - name: Push image
       command: docker push ayshathramseena/petstore:latest
